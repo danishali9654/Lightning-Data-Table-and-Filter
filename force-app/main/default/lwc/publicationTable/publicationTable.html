@@ -1,47 +1,4 @@
 <template>
-    <lightning-card class="cstmCardStyle">
-        
-<div class="scrollable-table">
 
-        <lightning-datatable
-            key-field="id"
-            data={paginatedData}
-            columns={columns}
-            class="cstmTableStyle WrapText"
-            hide-checkbox-column="true"
-            onsort={handleSort}
-            sorted-by={sortedBy}
-            sorted-direction={sortedDirection}
-            column-widths-mode="fixed">
-        </lightning-datatable>
-        </div>
-    </lightning-card>
-
-        <div class="slds-grid slds-grid_vertical-align-center slds-m-top_x-large">
-            <div class="slds-col">
-                       <!-- Pagination Buttons -->
-                    <div class="pagination">
-                        <template for:each={pageNumbers} for:item="page">
-                            <button class="pagination-tab" key={page} onclick={handlePageChange} data-id={page}>
-                                {page}
-                            </button>
-                        </template>
-                        <button class="lastBtn" onclick={handleLastPage}>Last</button>
-                    </div>
-            </div>
-        
-            <div class="slds-col_bump-left">
-                <div class="pagination-header">
-                <div>{startRecord}–{endRecord} of <span> {totalRecords} </span></div>
-                </div>
-                <!-- Dropdown to select page size -->
-                <!-- <lightning-combobox
-                    variant="label-hidden"
-                    value={selectedPagination}
-                    options={paginationOptions}
-                    onchange={handlePaginationChange}>
-                </lightning-combobox> -->
-            </div>
-        </div>
 
 </template>
